@@ -1,0 +1,170 @@
+/* ===== 全局重置 ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== CSS 变量 ===== */
+:root {
+  --primary: #409eff;
+  --primary-light: #66b1ff;
+  --primary-dark: #3a8ee6;
+  --success: #67c23a;
+  --warning: #e6a23c;
+  --danger: #f56c6c;
+  --info: #909399;
+
+  --bg: #f0f2f5;
+  --bg-card: #ffffff;
+  --text-primary: #303133;
+  --text-regular: #606266;
+  --text-secondary: #909399;
+  --text-placeholder: #c0c4cc;
+  --border: #e4e7ed;
+  --border-light: #ebeef5;
+  --border-lighter: #f2f6fc;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 24px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 12px;
+
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== 基础样式 ===== */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* ===== 页面通用容器 ===== */
+.page-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.page-header h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.page-header p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ===== 卡片增强 ===== */
+.el-card {
+  border-radius: var(--radius) !important;
+  border: 1px solid var(--border-lighter) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: var(--transition);
+}
+
+.el-card:hover {
+  box-shadow: var(--shadow) !important;
+}
+
+/* ===== 按钮增强 ===== */
+.el-button--primary {
+  border-radius: var(--radius-sm);
+}
+
+/* ===== 表格增强 ===== */
+.el-table {
+  border-radius: var(--radius) !important;
+  overflow: hidden;
+}
+
+.el-table th.el-table__cell {
+  background-color: #f5f7fa;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ===== 分页增强 ===== */
+.el-pagination {
+  justify-content: flex-end;
+}
+
+/* ===== 对话框增强 ===== */
+.el-dialog {
+  border-radius: var(--radius-lg) !important;
+}
+
+.el-dialog__header {
+  border-bottom: 1px solid var(--border-lighter);
+  padding: 20px 24px;
+  margin: 0 !important;
+}
+
+.el-dialog__body {
+  padding: 24px;
+}
+
+.el-dialog__footer {
+  border-top: 1px solid var(--border-lighter);
+  padding: 16px 24px;
+}
+
+/* ===== 滚动条美化 ===== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #909399;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 16px;
+  }
+}

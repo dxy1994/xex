@@ -1,0 +1,61 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+    # MySQL配置
+    url: jdbc:mysql://localhost:3306/exam_questions?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root123456
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: redis123456
+  ai:
+    deepseek:
+      api-key: ${DEEPSEEK_API_KEY:your_api_key}
+      models:
+        chat:
+          model: deepseek-chat
+          temperature: 0.3
+          max-tokens: 4096
+        reasoner:
+          model: deepseek-reasoner
+          temperature: 0.7
+          max-tokens: 8192
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+jwt:
+  secret: ExamQuestionsSystemSecretKey2024VeryLongKeyForSecurity
+  expiration: 86400000
+
+app:
+  upload:
+    path: ./uploads
+
+# 微信开放平台配置（网站应用扫码登录）
+wechat:
+  appid: your_wechat_appid
+  secret: your_wechat_secret
+  redirect-uri: http://localhost:5173/auth/wechat/callback
+
+# DeepSeek 配置
+# 通过环境变量 DEEPSEEK_API_KEY 或下方 your-deepseek-api-key 设置API Key
+# 申请地址：https://platform.deepseek.com/api_keys
