@@ -1,0 +1,84 @@
+# ===================== Java / Maven =====================
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+
+# Maven wrapper
+.mvn/wrapper/maven-wrapper.properties
+
+# ===================== IDE =====================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.classpath
+.project
+.settings/
+.metadata/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# NetBeans
+nbproject/
+nbbuild/
+nbdist/
+
+# ===================== Node / Frontend =====================
+node_modules/
+dist/
+.npm/
+.yarn/
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Vite
+*.local
+
+# ===================== OS =====================
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===================== Environment / Secrets =====================
+*.env
+*.env.local
+*.env.*.local
+.envrc
+
+# ===================== Docker =====================
+docker-compose.override.yml
+
+# ===================== Logs =====================
+logs/
+*.log
+
+# ===================== Uploads / Runtime =====================
+uploads/
+*.pid
+*.seed
+*.pid.lock
+
+# ===================== Temp =====================
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.~*~
